@@ -12,9 +12,11 @@ import { useChatStore } from '../../../lib/chatStore';
 
 function ChatList() {
     const [addMore, setAddMore] = useState(false);
+    const [input, setInput] = useState("");
     const [chats, setChats] = useState([]);
     const { currentUser } = useUserStore();
     const {changeChat,chatId} =useChatStore();
+
     console.log(chatId)
     // useEffect(() => {
     //     const unSub = onSnapshot(doc(db, "userchats", currentUser.id), async (res) => {
@@ -144,7 +146,7 @@ function ChatList() {
 
 
       };
-      
+      const filteredChats = chats.filter(c=>c.user.username.toLowerCase().includes(input.toLowerCase()))
 
 
     return (
@@ -152,7 +154,7 @@ function ChatList() {
             <div className="search text-white flex items-center justify-between px-2">
                 <div className="searchBar text-white bg-[#2f4176] flex items-center gap-[5px] p-[10px] justify-between rounded-lg">
                     <FaSearch />
-                    <input type="text" placeholder='search...' className='bg-transparent outline-none grow' />
+                    <input type="text" placeholder='search...' className='bg-transparent outline-none grow'  onChange={(e) => setInput(e.target.value)}/>
                 </div>
                 <div className='add cursor-pointer relative p-[7px] bg-[#2f4176] rounded-xl  ' onClick={() => setAddMore((prev) => !prev)}>
                     {addMore ? <FaMinus /> : <FaPlus />}
@@ -177,13 +179,13 @@ function ChatList() {
             </div> */}
             <div className='ls h-[500px] overflow-y-auto grow flex flex-col'>
   {chats.length > 0 ? (
-    chats.map(chat => (
+    filteredChats.map(chat => (
       <div className="items flex items-center gap-[20px] p-[20px] cursor-pointer border-b-[1px] border-solid border-[#dddddd35]" key={chat.chatId}  onClick={()=>handleSelect(chat)} style={{
         backgroundColor: chat?.isSeen ? "transparent":"#5183fe",
       }}>
-        <img src={chat.user.avatar || avatar} className='w-[50px] h-[50px] rounded-full object-cover' alt="" />
+        <img src={chat.user.blocked.includes(currentUser.id)? avatar:chat.user.avatar || avatar} className='w-[50px] h-[50px] rounded-full object-cover' alt="" />
         <div className="text">
-          <span className='font-medium'>{chat.user.username}</span>
+          <span className='font-medium'>{chat.user.blocked.includes(currentUser.id)? "User":chat.user.username}</span>
           <p className='text-[14px] font-light text-gray-800'>{chat.lastMessage}</p>
         </div>
       </div>
