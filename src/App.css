@@ -1,0 +1,18 @@
+.container{
+    width:80vh ;
+    height: 90vh ;
+   
+/* background: rgba(0, 0, 0, 0.41);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.7px);
+-webkit-backdrop-filter: blur(10.7px);
+border: 1px solid rgba(0, 0, 0, 1);  */
+
+}
+.loading {
+    padding: 50px;
+    font-size: 36px;
+    border-radius: 10px;
+    background-color: rgba(17, 25, 40, 0.622);
+}
