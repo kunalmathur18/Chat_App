@@ -357,7 +357,7 @@ function Chat({ onAvatarClick }) {  // Accepting onAvatarClick prop from App.jsx
                 )}
                 <div ref={endRef}></div>
             </div> */}
-            <div className="center p-[20px] grow overflow-y-scroll flex flex-col gap-[20px]">
+            <div className="center p-[20px] grow overflow-y-scroll scrollbar-thumb-black flex flex-col gap-[20px]">
     {chat?.messages?.map((message) => (
         <div className={message.senderId === currentUser?.id ? "message own" : "message"} key={`${message.senderId}-${message.createdAt}`}>
             <div className="text">
