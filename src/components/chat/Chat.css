@@ -4,7 +4,7 @@
     scroll-behavior: smooth;
     scrollbar-track-color: rgba(17, 25, 40, 0.3);
     ::-webkit-scrollbar{
-        width: 2em !important;
+        width: 10px !important;
     }
     ::-webkit-scrollbar-track{
         background-color: rgba(17, 25, 40, 0.3);
@@ -82,4 +82,32 @@
         }
 
     }
+}
+.center::-webkit-scrollbar {
+    width: 8px;  /* Width of the scrollbar */
+}
+
+.center::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);  /* Background of the scrollbar track */
+    border-radius: 10px;  /* Rounded corners for the track */
+}
+
+.center::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);  /* Scrollbar color */
+    border-radius: 10px;  /* Rounded corners for the scrollbar */
+}
+
+.center::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);  /* Hover effect for the scrollbar */
+}
+
+/* Custom scrollbar styles for Firefox */
+.center {
+    scrollbar-width: thin;  /* Set width to thin */
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);  /* Scrollbar color and track color */
+}
+
+/* Dark mode support for better contrast */
+body.dark-mode .center::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
 }
