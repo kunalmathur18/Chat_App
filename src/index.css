@@ -12,11 +12,46 @@
 }
 body{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: linear-gradient(90deg, #5ee7df 7%, #b490ca 100%);
-
+    align-self: center!;
+    justify-content: center !important;
+    height: 100%;
+    padding: 30px;
+    /* background-image: linear-gradient(90deg, #5ee7df 7%, #b490ca 100%); */
+    min-height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    #6366f1 10%,  /* indigo-500 */
+    #0ea5e9 30%,  /* sky-500 */
+    #10b981 90%   /* emerald-500 */
+  );
 
 }
 
+@media (max-width: 768px) {
+    body {
+      background-image: linear-gradient(
+        135deg, /* Diagonal gradient for a more dynamic effect */
+        #6366f1 15%,  /* indigo-500 */
+        #7f9cf5 30%,  /* A lighter indigo for smoother transitions */
+        #0ea5e9 50%,  /* sky-500 */
+        #34d399 75%,  /* A lighter emerald */
+        #10b981 95%   /* emerald-500 */
+      );
+      background-size: 200% 200%; /* Zoom the gradient for more visual appeal */
+      animation: gradientMove 6s ease infinite; /* Add movement to the gradient */
+      padding: 0px;
+    }
+  }
+  
+  /* Animation to move the gradient smoothly */
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    /* 50% {
+      background-position: 100% 50%;
+    } */
+    100% {
+      background-position: 0% 50%;
+    }
+  }

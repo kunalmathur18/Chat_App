@@ -226,8 +226,8 @@ function Details() {
     const canEditBio = currentUser?.id === user?.id;
 
     return (
-        <div className='details bg-[rgba(0,0,0,0.41)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[10.7px] border-[1px] border-solid border-[rgba(0,0,0,1)] p-[20px]'>
-            <div className='mx-12 w-[200px]'>
+        <div className='details bg-[rgba(0,0,0,0.41)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[10.7px] border-[1px] border-solid border-[rgba(0,0,0,1)] p-[10px]'>
+            <div className='w-[200px]'>
                 <div className="user flex py-[20px] px-[20px] flex-col items-center gap-[10px] border-b-[1px] border-solid border-[#dddddd35]">
                     <img
                         className='w-[100px] h-[100px] rounded-full object-cover cursor-pointer'

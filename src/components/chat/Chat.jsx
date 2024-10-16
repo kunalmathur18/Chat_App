@@ -314,7 +314,7 @@ function Chat({ onAvatarClick }) {  // Accepting onAvatarClick prop from App.jsx
     };
 
     return (
-        <div className='chat flex flex-col bg-[rgba(0,0,0,0.41)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[10.7px] border-[1px] border-solid border-[rgba(0,0,0,1)] z-20 h-[100%]'>
+        <div className='chat flex grow-[2] flex-col  bg-[rgba(0,0,0,0.41)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[10.7px] border-[1px] border-solid border-[rgba(0,0,0,1)] z-20 h-[100%]'>
             <div className="top p-[20px] flex items-center justify-between border-b-[1px] border-solid border-[#dddddd35]">
                 <div className="user flex items-center gap[20px]">
                     <img 

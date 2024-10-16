@@ -79,8 +79,8 @@ function Login() {
     };
 
     return (
-        <div className='login w-[100%] h-[100%] flex items-center gap-[100px]'>
-            <div className='logo w-[300px] h-[300px] rounded-full overflow-hidden animate-bounce'>
+        <div className='login w-[100%] h-[100%] sm:flex items-center gap-[56px]'>
+            <div className='logo   animate-bounce'>
                 <img src={logo} alt="" />
             </div>
 
@@ -88,7 +88,7 @@ function Login() {
                 // Sign Up Form
                 <div className="item">
                     <h2 className='text-[25px]'>
-                        Welcome back, To <span className='text-[#33dbbf] font-bold'>Let's Chat</span>
+                        Welcome , To <span className='text-[#33dbbf] font-bold'>Let's Chat</span>
                     </h2>
                     <h2>Create an Account, <span className='text-[20px] font-bold text-white'>Sign Up</span></h2>
                     <form  onSubmit={handleRegister} >

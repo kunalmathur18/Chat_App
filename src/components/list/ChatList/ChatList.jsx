@@ -130,7 +130,7 @@ function ChatList() {
 
 
             </div> */}
-            <div className='ls h-[500px] overflow-y-auto grow flex flex-col'>
+            <div className='ls max-h-[400px] overflow-y-scroll grow flex flex-col'>
   {chats.length > 0 ? (
     filteredChats.map(chat => (
       <div className="items flex items-center gap-[20px] p-[20px] cursor-pointer border-b-[1px] border-solid border-[#dddddd35]" key={chat.chatId}  onClick={()=>handleSelect(chat)} style={{
@@ -155,3 +155,9 @@ function ChatList() {
 }
 
 export default ChatList;
+
+
+
+///above code is completely working below code are for testing
+
+

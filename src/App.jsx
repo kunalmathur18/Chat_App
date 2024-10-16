@@ -31,15 +31,15 @@ function App() {
   if (isLoading) return <div className='loading animate-pulse'>Loading..</div>;
 
   return (
-    <div className='container flex gap-3'>
+    <div className='container '>
       {currentUser ? (
         <>
-          <List className='grow-[1]' />
+          <List  />
           {chatId && (
-            <Chat className='grow-[7]' onAvatarClick={() => setShowDetails(true)} />  // Show Details on avatar click
+            <Chat  onAvatarClick={() => setShowDetails(true)} />  // Show Details on avatar click
           )}
           {chatId && showDetails && (
-            <Details className='grow-[1]' onBack={() => setShowDetails(false)} />  // Hide Details on back button click
+            <Details  onBack={() => setShowDetails(false)} />  // Hide Details on back button click
           )}
         </>
       ) : (

@@ -5,7 +5,7 @@ import ChatList from './ChatList/ChatList'
 
 function List() {
   return (
-    <div className='list  flex flex-col bg-[rgba(0,0,0,0.41)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[10.7px] border-[1px] border-solid border-[rgba(0,0,0,1)]"'>
+    <div className='list grow flex flex-col bg-[rgba(0,0,0,0.41)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[10.7px] border-[1px] border-solid border-[rgba(0,0,0,1)]"'>
       <UserInfo/>
       <ChatList/>
     </div>
@@ -13,3 +13,8 @@ function List() {
 }
 
 export default List
+
+
+///above code is completely working below code are for testing
+
+
