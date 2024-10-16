@@ -284,7 +284,7 @@ function Details() {
                             <span>Shared photos</span>
                             <MdOutlineKeyboardArrowDown />
                         </div>
-                        <div className="photos flex flex-col gap-[20px] h-[100px] overflow-scroll ">
+                        <div className="photos flex flex-col gap-[20px] h-[100px] overflow-y-scroll ">
                             <div className="photoItem">
                                 <div className="photoDetail">
                                     <img src={avatar} alt="" />

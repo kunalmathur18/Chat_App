@@ -21,6 +21,10 @@
     cursor: pointer;
 
 }
+.photos{
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
 .photoItem{
     display: flex;
     align-items: center;

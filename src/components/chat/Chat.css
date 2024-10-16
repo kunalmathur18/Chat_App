@@ -1,6 +1,8 @@
 .center{
     scrollbar-width: thin;
     scrollbar-color: black;
+    scroll-behavior: smooth;
+    scrollbar-track-color: rgba(17, 25, 40, 0.3);
 
     .own{
         align-self: flex-end ;
