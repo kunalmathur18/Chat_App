@@ -18,54 +18,7 @@ function ChatList() {
     const {changeChat,chatId} =useChatStore();
 
     console.log(chatId)
-    // useEffect(() => {
-    //     const unSub = onSnapshot(doc(db, "userchats", currentUser.id), async (res) => {
-    //         const items = res.data().chats;
-    //         const promises = items.map(async (item) => {
-    //             const userDocRef = doc(db, "users", item.receiverId);
-    //             const userDocSnap = await getDoc(userDocRef);
-    //             const user = userDocSnap.data();
-    //             return { ...item, user };
-    //         });
-
-    //         const chatData = await Promise.all(promises)
-    //         setChats(chatData.sort((a, b) => b.updatedAt - a.updatedAt));
-
-
-    //     });
-    //     return () => {
-    //         unSub()
-    //     }
-
-
-    // }, [currentUser.id])
-
-
-
-    // useEffect(() => {
-    //     const unSub = onSnapshot(doc(db, "userchats", currentUser.id), async (res) => {
-    //       if (res.exists()) {
-    //         const items = res.data().chats;
-    //         console.log('Chats retrieved:', items); // Add this line for logging
-    //         const promises = items.map(async (item) => {
-    //           const userDocRef = doc(db, "users", item.receiverId);
-    //           const userDocSnap = await getDoc(userDocRef);
-    //           const user = userDocSnap.data();
-    //           return { ...item, user };
-    //         });
-      
-    //         const chatData = await Promise.all(promises)
-    //         setChats(chatData.sort((a, b) => b.updatedAt - a.updatedAt));
-    //       } else {
-    //         console.log('No chats found for this user');
-    //       }
-    //     });
-      
-    //     return () => {
-    //       unSub();
-    //     };
-    //   }, [currentUser.id]);
-
+   
 
 //its below is worling correct
 
