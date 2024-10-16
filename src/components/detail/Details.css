@@ -23,21 +23,16 @@
 }
 .photos{
     scrollbar-width: thin;
-    scrollbar-color: black;
-    scroll-behavior: smooth;
-    scrollbar-track-color: rgba(17, 25, 40, 0.3);
-    ::-webkit-scrollbar{
-        width: 10px !important;
-    }
-    ::-webkit-scrollbar-track{
-        background-color: rgba(8, 10, 13, 0.3);
-        border-radius: 20px;
-    }
-    ::-webkit-scrollbar-thumb{
-        background:black;
-        border: 2px solid transparent;
-        border-radius: 20px;
-    }
+    scrollbar-color: black rgba(0,0,0,0.41);
+}
+.photos::-webkit-scrollbar{
+    width: 2vw;
+}
+.photos::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.41);
+}
+.photos::-webkit-scrollbar-thumb{
+    background-color: black;
 }
 .photoItem{
     display: flex;

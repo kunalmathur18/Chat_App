@@ -300,9 +300,9 @@ if(!querySnapShot.empty){
   
   return (
     <div className='adduser '>
-        <form onSubmit={handleSearch} action="" className='flex gap-[20px] '>
+        <form onSubmit={handleSearch} action="" className='flex gap-[10px] '>
             <input type="text" placeholder='userName..' className='p-[10px] rounded-[10px] border-none outline-none bg-[#2f4176]' name='username' />
-            <button className='p-[10px] bg-[#bc8b8b] rounded-xl cursor-pointer'>search</button>
+            <button className='p-[8px] bg-[#bc8b8b] rounded-xl cursor-pointer'>search</button>
 
         </form>
        { user && <div className="user mt-[50px] gap-2 flex items-center justify-between">
@@ -311,7 +311,7 @@ if(!querySnapShot.empty){
                 <span className='text-[#3eb372] font-bold'>{user.username} </span>
 
             </div>
-            <button className='p-[10px] bg-[#bc8b8b] rounded-xl cursor-pointer' onClick={handleAdd}>Add user</button>
+            <button className='p-[8px] bg-[#bc8b8b] rounded-xl cursor-pointer' onClick={handleAdd}>Add user</button>
 
         </div>}
       

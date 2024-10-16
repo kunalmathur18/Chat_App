@@ -104,12 +104,12 @@ function ChatList() {
 
     return (
         <div className='chatList flex flex-col gap-3   '>
-            <div className="search text-white flex items-center justify-between px-2">
+            <div className="search text-white relative flex items-center justify-between px-2">
                 <div className="searchBar text-white bg-[#2f4176] flex items-center gap-[5px] p-[10px] justify-between rounded-lg">
                     <FaSearch />
                     <input type="text" placeholder='search...' className='bg-transparent outline-none grow'  onChange={(e) => setInput(e.target.value)}/>
                 </div>
-                <div className='add cursor-pointer relative p-[7px] bg-[#2f4176] rounded-xl  ' onClick={() => setAddMore((prev) => !prev)}>
+                <div className='add cursor-pointer  p-[7px] bg-[#2f4176] rounded-xl  ' onClick={() => setAddMore((prev) => !prev)}>
                     {addMore ? <FaMinus /> : <FaPlus />}
                 </div>
             </div>

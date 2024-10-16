@@ -1,9 +1,9 @@
 .adduser{
-    padding: 30px;
+    padding: 10px;
     background-color: rgba(32, 37, 47, 0.9);
     border-radius: 10px;
     position: absolute;
-    top: -180px;
+    top: -100px;
     bottom: 0;
     left: 0px;
     right: 0px;
