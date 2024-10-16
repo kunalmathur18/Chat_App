@@ -140,7 +140,7 @@ function App() {
         <>
           <List className='grow-[1]' />
           {chatId && (
-            <Chat className='grow-[2]' onAvatarClick={() => setShowDetails(true)} />  // Show Details on avatar click
+            <Chat className='grow-[7]' onAvatarClick={() => setShowDetails(true)} />  // Show Details on avatar click
           )}
           {chatId && showDetails && (
             <Details className='grow-[1]' onBack={() => setShowDetails(false)} />  // Hide Details on back button click

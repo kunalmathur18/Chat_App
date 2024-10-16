@@ -582,8 +582,8 @@ function Chat({ onAvatarClick }) {  // Accepting onAvatarClick prop from App.jsx
                         style={{ cursor: 'pointer' }} 
                     />
                     <div className="text flex flex-col gap-2">
-                        <span className='text-[18px] font-bold'>{user?.username}</span>
-                        <p className='text-[14px] font-light text-[#a5a5a5]'>
+                        <span className='text-[22px] text-[#f49778] font-bold'>{user?.username}</span>
+                        <p className='text-[18px] font-light text-[#f0e9e9] '>
                             {user?.bio || "No bio available"}
                         </p> 
                     </div>

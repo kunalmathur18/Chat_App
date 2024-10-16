@@ -1,10 +1,16 @@
 .center{
 
     .own{
-        align-self: flex-end !important;
+        align-self: flex-end ;
+        
         .text{
-            p{
-                background-color: aqua;
+            
+            p{border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius:10px ;
+                border-bottom-right-radius: 0px;
+                background-color: rgba(19, 183, 49, 0.62);
+                color: black;
             }
         }
     }
@@ -46,5 +52,18 @@
     &:disabled{
         color:brown !important;
         cursor: not-allowed;
+    }
+}
+.message{
+    align-self: flex-start;
+    .text{
+        p{
+            color: azure;
+            flex: 1;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
     }
 }

@@ -134,6 +134,8 @@ import { auth, db } from '../../lib/firebase';
 import { useChatStore } from '../../lib/chatStore';
 import { useUserStore } from '../../lib/userStore';
 import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import { MdModeEdit } from "react-icons/md";
+import { MdEditOff } from "react-icons/md";
 
 function Details() {
     const { chatId, user, isCurrentUserBlocked, isReceiverBlocked, changeBlock } = useChatStore();
@@ -187,13 +189,13 @@ function Details() {
             <div className='mx-12 w-[200px]'>
                 <div className="user flex py-[20px] px-[20px] flex-col items-center gap-[10px] border-b-[1px] border-solid border-[#dddddd35]">
                     <img className='w-[100px] h-[100px] rounded-full object-cover' src={user?.avatar || avatar} alt="" />
-                    <h2>{user?.username}</h2>
+                    <h2 className='text-[22px] font-bold text-[#dc6464]'>{user?.username}</h2>
                     
                     {/* Show the bio */}
                     {isEditing && canEditBio ? (
-                        <div>
+                        <div className='flex gap-1'>
                             <textarea
-                                className="bio-input"
+                                className="bio-input bg-[#4078cd] outline-none rounded-lg text-center"
                                 value={bio}
                                 onChange={(e) => setBio(e.target.value)}
                             />
@@ -205,25 +207,15 @@ function Details() {
                     
                     {/* Toggle Edit button only if the user can edit their bio */}
                     {canEditBio && (
-                        <button onClick={() => setIsEditing(!isEditing)}>
-                            {isEditing ? "Cancel" : "Edit Bio"}
+                        <button className='text-white text-[18px]' onClick={() => setIsEditing(!isEditing)}>
+                            {isEditing ? <MdEditOff /> : <MdModeEdit />}
                         </button>
                     )}
                 </div>
 
                 <div className="info p-[20px] flex flex-col gap-[20px] ">
-                    <div className="option ">
-                        <div className="title ">
-                            <span>Chat Setting</span>
-                            <IoIosArrowUp />
-                        </div>
-                    </div>
-                    <div className="option">
-                        <div className="title">
-                            <span>Privacy & help</span>
-                            <IoIosArrowUp />
-                        </div>
-                    </div>
+                    
+                   
                     <div className="option ">
                         <div className="title">
                             <span>Shared photos</span>
@@ -239,12 +231,7 @@ function Details() {
                             </div>
                         </div>
                     </div>
-                    <div className="option">
-                        <div className="title">
-                            <span>Shared Files</span>
-                            <IoIosArrowUp />
-                        </div>
-                    </div>
+                    
                     <button className='py-[10px] px-[20px] bg-red-700 border-none rounded-xl cursor-pointer hover:bg-red-900' onClick={handleBlock}>
                         {isCurrentUserBlocked ? "You are blocked" : isReceiverBlocked ? "User blocked" : "Block User"}
                     </button>
