@@ -300,7 +300,7 @@ if(!querySnapShot.empty){
   
   return (
     <div className='adduser '>
-        <form onSubmit={handleSearch} action="" className='flex gap-[10px] '>
+        <form onSubmit={handleSearch} action="" className='flex gap-[8px] '>
             <input type="text" placeholder='userName..' className='p-[10px] rounded-[10px] border-none outline-none bg-[#2f4176]' name='username' />
             <button className='p-[8px] bg-[#bc8b8b] rounded-xl cursor-pointer'>search</button>
 

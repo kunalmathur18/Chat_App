@@ -378,7 +378,7 @@ function Chat({ onAvatarClick }) {  // Accepting onAvatarClick prop from App.jsx
 </div>
 
 
-            <div className="bottom flex items-center justify-between text-white p-[20px] border-t-[1px] border-solid border-[#dddddd35] gap-[20px]">
+            <div className="bottom flex items-center justify-between text-white p-[10px] border-t-[1px] border-solid border-[#dddddd35] gap-[20px]">
                 <div className="icons flex gap-[20px] text-[20px]">
                     <label htmlFor="file">
                         <FaImages className='cursor-pointer' />
