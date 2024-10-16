@@ -7,13 +7,13 @@
         width: 10px !important;
     }
     ::-webkit-scrollbar-track{
-        background-color: rgba(17, 25, 40, 0.3);
-        border-radius: 10px;
+        background-color: rgba(8, 10, 13, 0.3);
+        border-radius: 20px;
     }
     ::-webkit-scrollbar-thumb{
         background:black;
         border: 2px solid transparent;
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .own{
