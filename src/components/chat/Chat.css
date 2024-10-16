@@ -1,6 +1,6 @@
 .center{
     scrollbar-width: thin;
-    background-color: transparent;
+    scrollbar-color: black;
 
     .own{
         align-self: flex-end ;
