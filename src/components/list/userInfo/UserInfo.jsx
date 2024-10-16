@@ -48,7 +48,7 @@ function UserInfo() {
 
   return (
     <div className='userInfo p-[20px] gap-[20px] flex items-center justify-between'>
-      <div className="user flex items-center gap-[10px] mx-8 text-white">
+      <div className="user flex items-center gap-[10px]  text-white">
         <img src={currentUser.avatar || avatar} className='w-[50px] h-[50px] rounded-full object-cover' alt="" />
         <h2>{currentUser.username}</h2>
       </div>
